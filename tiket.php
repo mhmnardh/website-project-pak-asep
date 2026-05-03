@@ -1,0 +1,381 @@
+<?php
+include 'include/header.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket & Makanan</title>
+    <link rel="stylesheet" href="css/tiket.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    
+    <div class="header">
+        <h1>🎫 Tiket & Makanan</h1>
+        <p>Pesan tiket dan makanan untuk acara Anda sekarang</p>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('tickets')">🎟️ Tiket</button>
+            <button class="tab-btn" onclick="switchTab('food')">🍔 Makanan</button>
+            <button class="tab-btn" onclick="switchTab('drinks')">🥤 Minuman</button>
+        </div>
+
+        <!-- Tab Tiket -->
+        <div id="tickets" class="tab-content active">
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="vip-ticket.jpg" alt="Tiket VIP" class="product-image"> 
+                    <div class="product-info">
+                        <div class="product-name">Tiket VIP</div>
+                        <div class="product-description">Akses penuh ke semua area eksklusif dan tempat duduk premium</div>
+                        <div class="product-price">Rp 150.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Tiket VIP', 150000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🎟️</div>
+                    <div class="product-info">
+                        <div class="product-name">Tiket Regular</div>
+                        <div class="product-description">Akses standar ke acara dengan tempat duduk biasa</div>
+                        <div class="product-price">Rp 75.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Tiket Regular', 75000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🎭</div>
+                    <div class="product-info">
+                        <div class="product-name">Tiket Student</div>
+                        <div class="product-description">Harga spesial untuk pelajar dengan presentasi kartu pelajar</div>
+                        <div class="product-price">Rp 50.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Tiket Student', 50000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Makanan -->
+        <div id="food" class="tab-content">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🍔</div>
+                    <div class="product-info">
+                        <div class="product-name">Burger Deluxe</div>
+                        <div class="product-description">Burger daging premium dengan keju, tomat, dan saus istimewa</div>
+                        <div class="product-price">Rp 45.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Burger Deluxe', 45000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🍕</div>
+                    <div class="product-info">
+                        <div class="product-name">Pizza Supreme</div>
+                        <div class="product-description">Pizza 12 inch dengan topping lengkap dan keju mozzarella</div>
+                        <div class="product-price">Rp 65.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Pizza Supreme', 65000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🌭</div>
+                    <div class="product-info">
+                        <div class="product-name">Hot Dog Spesial</div>
+                        <div class="product-description">Hot dog dengan sausage berkualitas dan topping pilihan</div>
+                        <div class="product-price">Rp 35.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Hot Dog Spesial', 35000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🍗</div>
+                    <div class="product-info">
+                        <div class="product-name">Fried Chicken</div>
+                        <div class="product-description">Ayam goreng renyah dengan bumbu rahasia dan sambal</div>
+                        <div class="product-price">Rp 40.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Fried Chicken', 40000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🌮</div>
+                    <div class="product-info">
+                        <div class="product-name">Tacos Trio</div>
+                        <div class="product-description">3 buah taco dengan isian daging dan sayuran segar</div>
+                        <div class="product-price">Rp 50.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Tacos Trio', 50000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Minuman -->
+        <div id="drinks" class="tab-content">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🥤</div>
+                    <div class="product-info">
+                        <div class="product-name">Jus Jeruk Segar</div>
+                        <div class="product-description">Jus jeruk alami tanpa pengawet, segar dan sehat</div>
+                        <div class="product-price">Rp 15.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Jus Jeruk Segar', 15000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🧋</div>
+                    <div class="product-info">
+                        <div class="product-name">Boba Tea Premium</div>
+                        <div class="product-description">Minuman teh dengan boba premium dan rasa istimewa</div>
+                        <div class="product-price">Rp 20.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Boba Tea Premium', 20000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🍹</div>
+                    <div class="product-info">
+                        <div class="product-name">Smoothie Mangga</div>
+                        <div class="product-description">Smoothie mangga tropis yang menyegarkan dan kaya nutrisi</div>
+                        <div class="product-price">Rp 18.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Smoothie Mangga', 18000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">☕</div>
+                    <div class="product-info">
+                        <div class="product-name">Coffee Espresso</div>
+                        <div class="product-description">Kopi espresso premium dari biji pilihan berkualitas tinggi</div>
+                        <div class="product-price">Rp 22.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Coffee Espresso', 22000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🧃</div>
+                    <div class="product-info">
+                        <div class="product-name">Minuman Isotonik</div>
+                        <div class="product-description">Minuman isotonik untuk mengganti cairan dan elektrolit tubuh</div>
+                        <div class="product-price">Rp 12.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Minuman Isotonik', 12000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🥛</div>
+                    <div class="product-info">
+                        <div class="product-name">Susu Coklat</div>
+                        <div class="product-description">Susu coklat hangat yang lezat dan bergizi untuk seluruh keluarga</div>
+                        <div class="product-price">Rp 16.000</div>
+                        <div class="product-quantity">
+                            <button class="quantity-btn" onclick="decreaseQty(this)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="quantity-btn" onclick="increaseQty(this)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Susu Coklat', 16000, this)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keranjang Belanja -->
+        <div class="cart-section">
+            <h2>🛒 Keranjang Belanja Anda</h2>
+            <div id="cartItems" class="empty-cart">Keranjang masih kosong</div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rp 0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Lanjut ke Pembayaran</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function switchTab(tabName) {
+            // Sembunyikan semua tab
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Hapus active dari semua button
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Tampilkan tab yang dipilih
+            document.getElementById(tabName).classList.add('active');
+
+            // Tandai button yang aktif
+            event.target.classList.add('active');
+        }
+
+        function increaseQty(btn) {
+            const input = btn.parentElement.querySelector('.quantity-input');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decreaseQty(btn) {
+            const input = btn.parentElement.querySelector('.quantity-input');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        function addToCart(name, price, btn) {
+            const quantity = btn.parentElement.querySelector('.quantity-input').value;
+            const item = {
+                name: name,
+                price: price,
+                quantity: parseInt(quantity)
+            };
+
+            cart.push(item);
+            updateCart();
+            alert(quantity + 'x ' + name + ' ditambahkan ke keranjang!');
+        }
+
+        function updateCart() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartTotalSpan = document.getElementById('cartTotal');
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<div class="empty-cart">Keranjang masih kosong</div>';
+                cartTotalSpan.textContent = 'Rp 0';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                html += `
+                    <div class="cart-item">
+                        <div>
+                            <div style="font-weight: 600;">${item.name}</div>
+                            <div style="font-size: 12px; color: #999;">${item.quantity}x Rp ${item.price.toLocaleString()}</div>
+                        </div>
+                        <div>
+                            <span style="font-weight: 600; color: var(--purple);">Rp ${subtotal.toLocaleString()}</span>
+                            <button onclick="removeFromCart(${index})" style="margin-left: 10px; padding: 5px 10px; background: #ff6b6b; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 12px;">Hapus</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartItemsDiv.innerHTML = html;
+            cartTotalSpan.textContent = 'Rp ' + total.toLocaleString();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Keranjang masih kosong!');
+                return;
+            }
+
+            let total = 0;
+            let details = 'Rincian Pesanan:\n\n';
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                details += item.quantity + 'x ' + item.name + ' = Rp ' + subtotal.toLocaleString() + '\n';
+            });
+
+            details += '\n---\nTotal: Rp ' + total.toLocaleString();
+            details += '\n\nTerima kasih telah berbelanja!';
+
+            alert(details);
+            // Redirect ke halaman pembayaran atau proses selanjutnya
+            // window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+
+</html>
+
+<?php
+include 'include/footer.php';
+?>
