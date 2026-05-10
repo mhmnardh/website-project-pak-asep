@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
+:root {
+    --gold: #ffcc00;
+    --blue: #0059ff;
+}
+
+
+body {
+    background-color: var(--dark);
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.bg-text {
+    position: absolute;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+#Jadwal {
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+}
+
+.Jadwal-box {
+    width: 100%;
+    max-width: 900px;
+    background: var(--glass);
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.match {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 12px;
+}
+
+.match:last-child {
+    border-bottom: none;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+}
+
+.time {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-width: 110px;
+}
+
+.status {
+    background: var(--blue);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}

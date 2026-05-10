@@ -12,13 +12,16 @@
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          font-family: 'Rajdhani', sans-serif;
+
       }
 
     footer {
         background-color: #000000;
         color: white;
         text-align: center;
-        padding: 20px 0;
+        
+        padding: 13px 0;
     }
 </style>
 <body>

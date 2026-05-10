@@ -2,7 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+       font-family: 'Rajdhani', sans-serif;
 }
+
+
+:root {
+    --gold: #ffcc00;
+    --blue: #0059ff;
+}
+
 
 body {
     background-color: var(--dark);
@@ -20,7 +28,7 @@ h3 {
 }
 
 section {
-    height: 93vh;
+    height: 95vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,32 +62,28 @@ section {
     opacity: 0.8;
 }
 
-a {
-    background: var(--gold); color: black;
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;  
+    transition: 0.3s;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+}
 
-      .btn {
-          display: inline-block;
-          padding: 12px 30px;
-          background: black;
-          color: white;
-          text-decoration: none;
-          border-radius: 50px;
-          font-weight: bold;
-          transition: 0.3s;
-      }
-
-      .btn:hover {
-          transform: scale(1.05);
-      }
-
-      .bg-text {
-          position: absolute;
-          font-size: 15rem;
-          font-weight: 900;
-          color: rgba(255, 255, 255, 0.02);
-          z-index: 1;
-          white-space: nowrap;
-          user-select: none;
-      }
+.bg-text {
+    position: absolute;
+    font-size: 15rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    z-index: 1;
+    white-space: nowrap;
+    user-select: none;
+}
