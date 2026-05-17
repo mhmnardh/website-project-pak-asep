@@ -1,6 +1,3 @@
-<?php
-include 'include/header.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +12,7 @@ include 'include/header.php';
 </head>
 
 <body>
+    <?php include 'include/header.php'; ?>
 
     <div class="login-container">
         <h1>Login</h1>

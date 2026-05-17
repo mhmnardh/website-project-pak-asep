@@ -1,33 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <style>
-    
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Rajdhani', sans-serif;
-
-      }
-
-    footer {
-        background-color: #000000;
-        color: white;
+    .site-footer {
+        background: linear-gradient(180deg, #080808 0%, #121212 100%);
+        color: #ddd;
+        padding: 28px 20px;
         text-align: center;
-        
-        padding: 13px 0;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    .site-footer .footer-content {
+        max-width: 980px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-footer p {
+        font-size: 0.95rem;
+        margin: 0;
+        color: #f1f1f1;
+    }
+
+    .site-footer span {
+        color: #9d9d9d;
+        font-size: 0.85rem;
+    }
+
+    .site-footer a {
+        color: #ffcc00;
+        text-decoration: none;
+    }
+
+    @media (min-width: 680px) {
+        .site-footer .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 </style>
-<body>
-    <hr>
-    <footer>
-        <p>&copy; 2026 SMKN 1 GARUT. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2026 SMKN 1 GARUT</p>
+        <span>Semua hak cipta dilindungi.</span>
+    </div>
+</footer>

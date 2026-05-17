@@ -1,5 +1,4 @@
 <?php
-include 'include/header.php';
 include 'konek/konek.php';
 ?>
 
@@ -12,7 +11,7 @@ include 'konek/konek.php';
     <title>Teams</title>
 </head>
 <body>
-    
+    <?php include 'include/header.php'; ?>
     <section id="teams">
         <h2 style="margin-bottom: 50px;">PRO TEAMS</h2>
         <div class="grid-container">
@@ -42,9 +41,6 @@ include 'konek/konek.php';
         </div>
     </section>
 
+    <?php include 'include/footer.php'; ?>
 </body>
 </html>
-
-<?php
-include 'include/footer.php';
-?>

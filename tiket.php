@@ -1,7 +1,3 @@
-<?php
-include 'include/header.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +12,7 @@ include 'include/header.php';
 </head>
 
 <body>
+    <?php include 'include/header.php'; ?>
     
     <div class="header">
         <h1>🎫 Tiket & Makanan</h1>
@@ -372,10 +369,7 @@ include 'include/header.php';
             // window.location.href = 'payment.html';
         }
     </script>
+    <?php include 'include/footer.php'; ?>
 </body>
 
 </html>
-
-<?php
-include 'include/footer.php';
-?>

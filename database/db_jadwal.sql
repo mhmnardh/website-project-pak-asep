@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Bulan Mei 2026 pada 17.34
+-- Waktu pembuatan: 17 Bulan Mei 2026 pada 17.02
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `db_jadwal` (
 
 INSERT INTO `db_jadwal` (`id`, `Waktu`, `Tim1`, `Tim2`, `Kondisi`) VALUES
 (1, '13.00', 'Tim Muhaimin', 'Tim Herlino', 'Live'),
-(2, '14.00', 'Tim Arif', 'Tim Lutfi', 'Segera');
+(2, '14.00', 'Tim Arif', 'Tim Lutfi', 'Segera'),
+(3, '2026-05-17T21:29', 'tim 6', 'tim 7', 'Belum Selesai');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +62,7 @@ ALTER TABLE `db_jadwal`
 -- AUTO_INCREMENT untuk tabel `db_jadwal`
 --
 ALTER TABLE `db_jadwal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

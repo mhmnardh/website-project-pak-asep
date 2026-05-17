@@ -1,8 +1,6 @@
 <?php
-include 'include/header.php';
 include 'konek/konek.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +12,8 @@ include 'konek/konek.php';
 </head>
 
 <body>
-       <section id="Jadwal">
+    <?php include 'include/header.php'; ?>
+    <section id="Jadwal">
         <div class="bg-text" style="top: 10%;">TIMELINE</div>
         <h2 style="margin-bottom: 30px; z-index: 2;">JADWAL HARI INI</h2>
         <div class="Jadwal-box" style="z-index: 2;">
@@ -42,9 +41,6 @@ include 'konek/konek.php';
         </div>
     </section>
 
+    <?php include 'include/footer.php'; ?>
 </body>
 </html>
-
-<?php
-include 'include/footer.php';  
-?>
